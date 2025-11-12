@@ -1,5 +1,5 @@
 '''
-This Python script is a working proof of concept example of using Stack Overflow APIs for a Search Log Report. 
+This Python script is a working proof of concept example of using Stack Internal APIs for a Search Log Report. 
 If you run into difficulties, please leave feedback in the Github Issues.
 '''
 
@@ -27,13 +27,13 @@ def get_args():
     parser = argparse.ArgumentParser(
         prog='soe_search_metrics.py',
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        description='Gathers search logs from Stack Overflow for Teams and exports them to a CSV '
+        description='Gathers search logs from Stack Internal and exports them to a CSV '
                     'file.',
-        epilog = 'Example for Stack Overflow Enterprise: \n'
+        epilog = 'Example for Stack Internal (Enterprise): \n'
                  'python3 soe_search_logs.py --url "https://SUBDOMAIN.stackenterprise.co"\n\n')
     parser.add_argument('--url', 
                         type=str,
-                        help='[REQUIRED] Base URL for your Stack Overflow for Teams instance')
+                        help='[REQUIRED] Base URL for your Stack Internal instance')
 
     return parser.parse_args()
 
